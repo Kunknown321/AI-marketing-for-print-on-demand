@@ -4,8 +4,8 @@
 # Edit this file with YOUR details. This drives the entire system.
 
 business:
-  brand_name: ""                    # Your brand name (e.g., "OtakuThreads")
-  tagline: ""                       # Short tagline (e.g., "Wear Your Anime Soul")
+  brand_name: "curatedMerch"
+  tagline: "Curated Anime Culture, Worn Daily"
   printify_store_url: ""            # Your Printify Pop-Up Store URL
   email: ""                         # Business email (optional)
 
@@ -64,19 +64,19 @@ marketing:
 social_media:
   platforms:
     instagram:
-      handle: ""                    # @yourhandle
+      handle: "@curatedmerch"       # Update once created
       content_types: ["reels", "carousels", "stories", "posts"]
       posting_frequency: "1-2/day"
     tiktok:
-      handle: ""
+      handle: "@curatedmerch"         # Update once created
       content_types: ["short_videos", "trends", "duets"]
       posting_frequency: "1-2/day"
     pinterest:
-      handle: ""
+      handle: "@curatedmerch"         # Update once created
       content_types: ["pins", "boards"]
       posting_frequency: "5-10/day"
     twitter:
-      handle: ""
+      handle: "@curatedmerch"         # Update once created
       content_types: ["tweets", "threads", "polls"]
       posting_frequency: "3-5/day"
 
