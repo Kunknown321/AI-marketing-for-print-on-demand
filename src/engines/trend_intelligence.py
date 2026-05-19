@@ -91,11 +91,16 @@ class AnimeTrendIntelligence:
         Returns:
             List of trending posts with titles and engagement.
         """
-        resp = self.session.get(
-            f"{self.REDDIT_BASE}/r/{subreddit}/hot.json",
-            params={"limit": limit},
-        )
-        resp.raise_for_status()
+        try:
+            resp = self.session.get(
+                f"{self.REDDIT_BASE}/r/{subreddit}/hot.json",
+                params={"limit": limit},
+                timeout=10,
+            )
+            resp.raise_for_status()
+        except requests.RequestException:
+            return []
+
         posts = resp.json()["data"]["children"]
 
         return [
@@ -160,6 +165,14 @@ class AnimeTrendIntelligence:
         reddit_anime = self.get_trending_reddit_posts("anime", 15)
         reddit_memes = self.get_trending_reddit_posts("animemes", 15)
 
+        reddit_section = ""
+        if reddit_anime:
+            reddit_section += f"\nTRENDING REDDIT r/anime:\n{json.dumps(reddit_anime, indent=2)}"
+        if reddit_memes:
+            reddit_section += f"\nTRENDING REDDIT r/animemes:\n{json.dumps(reddit_memes, indent=2)}"
+        if not reddit_section:
+            reddit_section = "\n(Reddit data unavailable — use your own knowledge of current anime community trends)"
+
         prompt = f"""You are an anime culture and print-on-demand market research expert.
 
 Analyze this data to identify the HOTTEST opportunities for anime typography t-shirt designs.
@@ -169,12 +182,7 @@ CURRENTLY AIRING TOP ANIME:
 
 ALL-TIME TOP ANIME (evergreen):
 {json.dumps(alltime, indent=2)}
-
-TRENDING REDDIT r/anime:
-{json.dumps(reddit_anime, indent=2)}
-
-TRENDING REDDIT r/animemes:
-{json.dumps(reddit_memes, indent=2)}
+{reddit_section}
 
 Provide a JSON report with:
 {{
