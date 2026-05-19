@@ -35,3 +35,9 @@ data/*.xlsx
 
 # Logs
 *.log
+
+# Generated output (these are personal to each user)
+output/*.json
+output/**/*.json
+!output/.gitkeep
+!output/**/.gitkeep

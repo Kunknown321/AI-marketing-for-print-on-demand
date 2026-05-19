@@ -1,1 +1,3 @@
-"""AI Marketing for Print on Demand - AI-powered marketing tools for POD businesses."""
+"""OtakuPrint Marketing Engine — AI-powered organic marketing for anime print-on-demand."""
+
+__version__ = "1.0.0"

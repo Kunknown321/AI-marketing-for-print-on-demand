@@ -1,0 +1,88 @@
+# ============================================================
+# OtakuPrint Marketing Engine — Business Profile
+# ============================================================
+# Edit this file with YOUR details. This drives the entire system.
+
+business:
+  brand_name: ""                    # Your brand name (e.g., "OtakuThreads")
+  tagline: ""                       # Short tagline (e.g., "Wear Your Anime Soul")
+  printify_store_url: ""            # Your Printify Pop-Up Store URL
+  email: ""                         # Business email (optional)
+
+product:
+  type: "t-shirt"
+  design_style: "typography"        # typography, illustration, mixed
+  typography_styles:                # Mix of all styles
+    - "japanese_english"            # Japanese text + English translation
+    - "minimalist_streetwear"       # Clean streetwear aesthetic
+    - "bold_graphic"                # Bold loud typography
+    - "retro_vintage"              # Vintage anime aesthetic
+  price_range:
+    min: 19.99
+    max: 34.99
+  print_provider: "printify"
+
+target_audience:
+  age_range: "18-30"
+  gender: "unisex"
+  psychographic: "hardcore_otaku"
+  interests:
+    - anime
+    - manga
+    - japanese_culture
+    - cosplay
+    - gaming
+    - streetwear
+  location: "global"
+  platforms_they_use:
+    - tiktok
+    - instagram
+    - reddit
+    - twitter
+    - pinterest
+
+niche:
+  primary: "anime_culture"
+  sub_niches:
+    - "anime_quotes"
+    - "otaku_lifestyle"
+    - "japanese_typography"
+    - "anime_memes"
+    - "waifu_culture"
+    - "shonen_anime"
+    - "slice_of_life"
+    - "anime_aesthetic"
+
+marketing:
+  budget: 0                         # $0 — all organic
+  daily_time_hours: 1.5             # 1-2 hours per day
+  content_style:
+    - "aesthetic_clean"             # Clean vibes
+    - "community_discussion"        # "Which anime is GOAT?" style
+  tone: "relatable, otaku-insider, fun, slightly unhinged"
+
+social_media:
+  platforms:
+    instagram:
+      handle: ""                    # @yourhandle
+      content_types: ["reels", "carousels", "stories", "posts"]
+      posting_frequency: "1-2/day"
+    tiktok:
+      handle: ""
+      content_types: ["short_videos", "trends", "duets"]
+      posting_frequency: "1-2/day"
+    pinterest:
+      handle: ""
+      content_types: ["pins", "boards"]
+      posting_frequency: "5-10/day"
+    twitter:
+      handle: ""
+      content_types: ["tweets", "threads", "polls"]
+      posting_frequency: "3-5/day"
+
+goals:
+  first_sale_target_days: 10
+  monthly_revenue_target: 10000
+  yearly_revenue_target: 120000
+  brand_vision: "long_term"
+  hustle_type: "side_hustle"
